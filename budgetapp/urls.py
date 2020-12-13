@@ -9,7 +9,7 @@
 from django.urls import path
 from django.contrib import admin
 from . import views
-
+#urls required
 urlpatterns = [
 
     path('', views.project_list, name='list'),
