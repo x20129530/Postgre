@@ -1,3 +1,4 @@
+/* J Self executing function */
 (function(){
 
     document.querySelector('#categoryInput').addEventListener('keydown', function(e){

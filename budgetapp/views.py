@@ -6,15 +6,13 @@ from django.utils.text import slugify
 from .forms import ExpenseForm
 import json
 # Create your views here.
-""" J 3 views are created particular to routes and for that
-step 1: 3 models(tables) are imported Project, category and, Expense.
-Step 2: they are feeded to functions and are """
+# J 3 views are created particular to routes in urls file 
 
-# list outs all the projects/budgets.
+# J list outs all the projects/budgets.
 def project_list(request):
     project_list = Project.objects.all()
     return render(request, "budgetapp/listview.html", {'project_list' : project_list})
-# 
+# J detailed view with three possibilities Get, Post and, Delete.
 def project_detail(request, project_slug):
     project = get_object_or_404(Project, slug=project_slug)
 
@@ -44,8 +42,7 @@ def project_detail(request, project_slug):
         expense.delete()
         return HttpResponse('')
     return HttpResponseRedirect(project_slug)
-
-    
+#J View To add the new budget
 class ProjectCreateView(CreateView):
     model = Project
     template_name = 'budgetapp/add-project.html'

@@ -1,8 +1,8 @@
 #J created the urls.py file which holds the url details of various pages in our project.
 #J added three paths
-#J 1.  "" - main page which will showcase all the projects.
-#J 2.  'add' - which will let us add the new project(it's the callable route view which takes request and return response).
-#J 3.  'dynamic route created via <slug:project_slug>
+#J 1. "" - main page which will showcase all the projects that are created.
+#J 2. 'add' - which will let us add the new project(it's the callable route view which takes request and return response).
+#J 3. '<slug:project_slug>' -dynamic route created when new project gets added.
 
 
 
