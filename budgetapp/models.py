@@ -4,7 +4,7 @@ from django.utils.text import slugify
 class Project(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, blank=True)
-    budget = models.DecimalField(max_digits=8 , decimal_places=2)
+    budget = models.IntegerField()
 #j Save method is override to generate the new slug automatically
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
