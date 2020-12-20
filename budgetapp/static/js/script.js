@@ -28,10 +28,10 @@ function fetchCategoryArray(){
     var categories = []
 
     document.querySelectorAll('.category').forEach(function(e){
-        select1 = e.querySelector('.name').innerHTML
-        if (select1 == '') return;
+       var name = e.querySelector('.name').innerHTML
+        if (name == '') return;
 
-        categories.push(select1)
+        categories.push(name)
     })
 
     return categories
@@ -39,7 +39,7 @@ function fetchCategoryArray(){
 
 function updateCategoriesString(){
     let categories = fetchCategoryArray()
-    document.querySelector('input[select1="categoriesString"]').value = categories.join(',')
+    document.querySelector('input[name="categoriesString"]').value = categories.join(',')
 }
 
 function removeCategory(e){
