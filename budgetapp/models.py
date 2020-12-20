@@ -36,3 +36,5 @@ class Expense(models.Model):
 class Meta:
     ordering = ('-amount',)
 
+    
+

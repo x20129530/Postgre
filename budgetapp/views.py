@@ -2,12 +2,14 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import Project, Category, Expense
 from django.views.generic import CreateView
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
 from django.utils.text import slugify
 from .forms import ExpenseForm
 import json
 # Create your views here.
 # J 3 views are created particular to routes in urls file 
-
 # J list outs all the projects/budgets.
 def project_list(request):
     project_list = Project.objects.all()
@@ -33,7 +35,7 @@ def project_detail(request, project_slug):
                     project=project,
                     title=title,
                     amount=amount,
-                    category=category
+                    category=category,
                 ).save()
 
     elif request.method == 'DELETE':

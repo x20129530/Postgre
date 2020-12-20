@@ -33,12 +33,25 @@
     <!--J expense Section-->
     <section class="section section-expenses">
         <h1>My Expenses</h1>
-        <hr>
         <div class="row">
             <button class="btn waves-effect right modal-trigger" href="#expenseModal">
                 <i class="material-icons white-text left">add_circle</i>Add Expenses
             </button>
         </div>
+        <hr>
+        <div class="card-panel z-depth-0 expense">
+            <div class="row">
+                <div class="col s12 m4 14">
+                    <span class="bold" class="title">Title</span>
+                </div>
+                <div class="col s12 m4 14">
+                    <span class="bold" class="title">Amount</span>
+                </div>
+                <div class="bold" class="col s12 m4 14">
+                    <span class="title">Category</span>
+                </div>
+        </div>
+        <br>
         <ul class="z-depth-1">
            {% for expense in Expense_list %}
             <li>
