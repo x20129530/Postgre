@@ -28,11 +28,10 @@ function fetchCategoryArray(){
     var categories = []
 
     document.querySelectorAll('.category').forEach(function(e){
-        name = e.querySelector('.name').innerHTML
-        if (name == '') return;
+        select1 = e.querySelector('.name').innerHTML
+        if (select1 == '') return;
 
-        categories.push(name)
-    })
+        categories.push(select1)
 
     return categories
 }
